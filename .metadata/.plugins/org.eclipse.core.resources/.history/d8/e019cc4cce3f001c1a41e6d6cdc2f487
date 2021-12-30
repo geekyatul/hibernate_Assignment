@@ -1,0 +1,24 @@
+package com.wipro.hibernate.t2assignment1;
+
+import com.wipro.hibernate.t2assignment1.dao.EmployeeDao;
+import com.wipro.hibernate.t2assignment1.models.Employee;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        
+        EmployeeDao employeeDao=new EmployeeDao(); 
+        
+        Employee emp1=new Employee("Atul patel","B1");
+        
+        //save the object 
+        employeeDao.saveEmployee(emp1);
+        
+    }
+}

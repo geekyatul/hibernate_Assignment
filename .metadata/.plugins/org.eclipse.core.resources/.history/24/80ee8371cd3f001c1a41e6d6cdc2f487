@@ -1,0 +1,33 @@
+package com.wipro.hibernate.t2assignment1.dao;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.wipro.hibernate.t2assignment1.config.Config;
+import com.wipro.hibernate.t2assignment1.models.Employee;
+
+public class EmployeeDao {
+	
+	
+	public void saveEmployee(Employee employee)
+	{
+		Transaction transaction=null;
+		
+		try(Session session=Config.getSessionFactory().openSession())
+		{
+			transaction=session.beginTransaction();
+			session.save(employee);
+			
+			
+		}catch (Exception e) {
+			if(transaction!=null)
+			{
+				transaction.rollback();
+			}
+			System.out.println("Error Messgage"+e.getMessage());
+		}
+		
+	}
+	
+
+}

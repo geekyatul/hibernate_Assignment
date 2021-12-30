@@ -1,0 +1,14 @@
+package com.wipro.hibernate.t5allassignment;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        //First save all the car detail in database 
+    	
+    }
+}

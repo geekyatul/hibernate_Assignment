@@ -1,0 +1,20 @@
+package com.wipro.hibernate.t5allassignment;
+
+import com.wipro.hibernate.t5allassignment.models.Car;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        //First save all the car detail in database 
+    	Car car1=new Car("KL-07 AB 123","Polo","White","Volkswagen",700000);
+    	Car car2=new Car("KL-07 AB 234","Vento","Black","Volkswagen",600000);
+    	Car car3=new Car("KL-07 AC 345","Corolla","Silver","Toyota",1000000);
+    	Car car4=new Car("KL-07 BC 123","Sail Uva","Red","Chevrolet",500000);
+
+    }
+}

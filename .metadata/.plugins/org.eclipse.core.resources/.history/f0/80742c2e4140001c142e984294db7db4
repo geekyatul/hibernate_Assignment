@@ -1,0 +1,5 @@
+package com.wipro.hibernate.t3assignment2.models;
+
+public class Question {
+
+}

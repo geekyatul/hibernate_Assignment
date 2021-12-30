@@ -1,0 +1,33 @@
+package com.wipro.hibernate.t5allassignment.dao;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.wipro.hibernate.t5allassignment.config.Config;
+import com.wipro.hibernate.t5allassignment.models.Car;
+
+public class CarDao {
+	
+	
+	  public void saveCar(Car car)
+	  {
+		  Transaction transaction=null;
+		  
+		  try(Session session=Config.getSessionFactory().openSession()) {
+			  
+			  transaction=session.beginTransaction();
+			    session.save(car);
+			    
+			   transaction.commit();
+			   session.close();
+			  
+		  }
+		  catch (Exception e) {
+			  if(transaction!=null)
+				 transaction.rollback();
+		
+		}
+	  }
+	
+
+}

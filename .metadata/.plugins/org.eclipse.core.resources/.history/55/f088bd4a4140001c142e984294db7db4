@@ -1,0 +1,25 @@
+package com.wipro.hibernate.t3assignment2.models;
+
+import java.util.List;
+
+public class Question {
+	
+	private int qId;
+	private String qName;
+	private List<String> options;
+	private String answer;
+	
+	public Question() {
+		
+	}
+	public Question(int qId, String qName, List<String> options, String answer) {
+		super();
+		this.qId = qId;
+		this.qName = qName;
+		this.options = options;
+		this.answer = answer;
+	}
+	
+	
+
+}

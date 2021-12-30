@@ -1,0 +1,40 @@
+package com.wipro.hibernate.t1assignment1;
+
+//import javax.transaction.Transaction;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+import org.hibernate.service.spi.SessionFactoryServiceRegistryBuilder;
+
+import com.wipro.hibernate.t1assignment1.models.Employee;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        Configuration configuration=new Configuration().configure().addAnnotatedClass(Employee.class);
+         
+        SessionFactory factory=configuration.buildSessionFactory();
+        Session session=factory.openSession();
+        
+        Employee employee1=new Employee("Atul Patel","Manager",700000);
+        
+        Transaction transaction=session.beginTransaction();
+        
+          session.save(employee1);
+          
+          transaction.commit();
+          
+          session.close();
+        
+    
+    }
+}

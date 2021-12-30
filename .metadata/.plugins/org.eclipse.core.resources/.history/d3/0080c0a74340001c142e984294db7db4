@@ -1,0 +1,44 @@
+package com.wipro.hibernate.t3assignment2;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.wipro.hibernate.t3assignment2.config.Config;
+import com.wipro.hibernate.t3assignment2.models.Question;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+	  static SessionFactory sessionFactory=Config.getSessionFactory();
+	
+    public static void main( String[] args )
+    {
+        System.out.println("Start of assignment");
+        
+        Session session=sessionFactory.openSession();
+        Transaction transaction=session.beginTransaction();
+        
+        Question q1=new Question("Cleanest city of India?","Indore");
+        List<String> options=new ArrayList<>();
+        options.add("Banglore");
+        options.add("Jabalpur");
+        options.add("Chennai");
+        options.add("Gujrat");
+        q1.setOptions(options);
+        session.save(q1);
+        
+        transaction.commit();
+        session.close();
+        
+        
+        
+    }
+}

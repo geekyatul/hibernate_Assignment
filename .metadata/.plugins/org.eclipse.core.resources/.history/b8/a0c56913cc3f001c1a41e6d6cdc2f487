@@ -1,0 +1,6 @@
+package com.wipro.hibernate.t2assignment1.dao;
+
+public class EmployeeDao {
+	
+
+}

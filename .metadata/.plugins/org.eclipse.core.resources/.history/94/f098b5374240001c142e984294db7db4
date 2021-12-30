@@ -1,0 +1,57 @@
+package com.wipro.hibernate.t3assignment2.models;
+
+import java.util.List;
+
+public class Question {
+	
+	private int qId;
+	private String qName;
+	private List<String> options;
+	private String answer;
+	
+	public Question() {
+		
+	}
+	public Question(int qId, String qName, List<String> options, String answer) {
+		super();
+		this.qId = qId;
+		this.qName = qName;
+		this.options = options;
+		this.answer = answer;
+	}
+	public int getqId() {
+		return qId;
+	}
+	public void setqId(int qId) {
+		this.qId = qId;
+	}
+	public String getqName() {
+		return qName;
+	}
+	public void setqName(String qName) {
+		this.qName = qName;
+	}
+	public List<String> getOptions() {
+		return options;
+	}
+	public void setOptions(List<String> options) {
+		this.options = options;
+	}
+	public String getAnswer() {
+		return answer;
+	}
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+	@Override
+	public String toString() {
+		return "Question [qId=" + qId + ", qName=" + qName + ", options=" + options + ", answer=" + answer + "]";
+	}
+	
+	
+	
+	
+	
+	
+
+}

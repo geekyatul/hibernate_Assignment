@@ -1,0 +1,18 @@
+package com.wipro.hibernate.t1assignment2.config;
+
+import org.hibernate.SessionFactory;
+
+public class Config {
+	
+	private SessionFactory sessionFactory=null;
+	
+	   public SessionFactory getSessionFactory()
+	   {
+		   if(sessionFactory==null)
+		   {
+			   
+		   }
+		   return sessionFactory;
+	   }
+
+}

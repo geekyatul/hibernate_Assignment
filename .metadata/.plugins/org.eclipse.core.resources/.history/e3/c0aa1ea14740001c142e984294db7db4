@@ -1,0 +1,5 @@
+package com.wipro.hibernate.t3assignment1.models;
+
+public class Continent {
+
+}
